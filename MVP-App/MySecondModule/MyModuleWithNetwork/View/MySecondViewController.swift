@@ -38,8 +38,8 @@ extension MySecondViewController: UITableViewDataSource {
 extension MySecondViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let user = users[indexPath.row]
-        let vc = ModuleBuilder.createMyDetailModule(user: user)
-        present(vc, animated: true, completion: nil)
+//        let vc = AssemblyModuleBuilder.createMyDetailModule(user: user)
+//        present(vc, animated: true, completion: nil)
     }
 }
 

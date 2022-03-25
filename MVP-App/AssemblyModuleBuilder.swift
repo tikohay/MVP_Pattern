@@ -8,24 +8,24 @@
 import Foundation
 import UIKit
 
-protocol Builder {
-    static func createMainModule() -> UIViewController
-    static func createMyModule() -> UIViewController
-    static func createDetailModule(comment: Comment?) -> UIViewController
-    static func createMySecondModule() -> UIViewController
-    static func createMyDetailModule(user: MyUser) -> UIViewController
+protocol AssemblyBuilderProtocol {
+    func createMainModule(router: RouterProtocol) -> UIViewController
+    func createMyModule() -> UIViewController
+    func createDetailModule(comment: Comment?, router: RouterProtocol) -> UIViewController
+    func createMySecondModule() -> UIViewController
+    func createMyDetailModule(user: MyUser) -> UIViewController
 }
 
-class ModuleBuilder: Builder {
-    static func createMainModule() -> UIViewController {
+class AssemblyModuleBuilder: AssemblyBuilderProtocol {
+    func createMainModule(router: RouterProtocol) -> UIViewController {
         let networkService = NetworkService()
         let view = MainViewController()
-        let presenter = MainPresenter(view: view, networkService: networkService)
+        let presenter = MainPresenter(view: view, networkService: networkService, router: router)
         view.presenter = presenter
         return view
     }
     
-    static func createMyModule() -> UIViewController {
+    func createMyModule() -> UIViewController {
         let view = MyViewController()
         let model = MyPerson(name: "Mike", lastname: "Tyson")
         let presenter = MyPresenter(view: view, model: model)
@@ -33,15 +33,15 @@ class ModuleBuilder: Builder {
         return view
     }
     
-    static func createDetailModule(comment: Comment?) -> UIViewController {
+    func createDetailModule(comment: Comment?, router: RouterProtocol) -> UIViewController {
         let view = DetailViewController()
         let networkService = NetworkService()
-        let presenter = DetailPresenter(view: view, networkService: networkService, comment: comment)
+        let presenter = DetailPresenter(view: view, networkService: networkService, router: router, comment: comment)
         view.presenter = presenter
         return view
     }
     
-    static func createMySecondModule() -> UIViewController {
+    func createMySecondModule() -> UIViewController {
         let view = MySecondViewController()
         let networkService = MyNetworkService()
         let presenter = MySecondPresenter(view: view, networkService: networkService)
@@ -49,7 +49,7 @@ class ModuleBuilder: Builder {
         return view
     }
     
-    static func createMyDetailModule(user: MyUser) -> UIViewController {
+    func createMyDetailModule(user: MyUser) -> UIViewController {
         let view = MyDetailViewController()
         let presenter = MyDetailPresenter(view: view, user: user)
         view.presenter = presenter

@@ -16,7 +16,7 @@
 		E83B819B27AA7BC600B492CF /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B819A27AA7BC600B492CF /* Comment.swift */; };
 		E83B819D27AA7BFA00B492CF /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B819C27AA7BFA00B492CF /* MainPresenter.swift */; };
 		E83B81A527AA865800B492CF /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E83B81A427AA865800B492CF /* MainViewController.xib */; };
-		E83B81A727AA880000B492CF /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B81A627AA880000B492CF /* ModuleBuilder.swift */; };
+		E83B81A727AA880000B492CF /* AssemblyModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83B81A627AA880000B492CF /* AssemblyModuleBuilder.swift */; };
 		E872ED1427EC89C100559A37 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872ED1327EC89C100559A37 /* MyViewController.swift */; };
 		E872ED1627EC89D000559A37 /* MyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E872ED1527EC89D000559A37 /* MyViewController.xib */; };
 		E872ED1827EC8AD700559A37 /* MyPerson.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872ED1727EC8AD700559A37 /* MyPerson.swift */; };
@@ -42,6 +42,7 @@
 		E89659B827EDD17E00B75309 /* MyDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89659B727EDD17E00B75309 /* MyDetailPresenter.swift */; };
 		E89659BA27EDD1AB00B75309 /* MyDetailViewInputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89659B927EDD1AB00B75309 /* MyDetailViewInputDelegate.swift */; };
 		E89659BD27EDD1F200B75309 /* MyDetailViewOutputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89659BC27EDD1F200B75309 /* MyDetailViewOutputDelegate.swift */; };
+		E89659BF27EDEE0400B75309 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89659BE27EDEE0400B75309 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,7 +57,7 @@
 		E83B819A27AA7BC600B492CF /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		E83B819C27AA7BFA00B492CF /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		E83B81A427AA865800B492CF /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		E83B81A627AA880000B492CF /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		E83B81A627AA880000B492CF /* AssemblyModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyModuleBuilder.swift; sourceTree = "<group>"; };
 		E872ED1327EC89C100559A37 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
 		E872ED1527EC89D000559A37 /* MyViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyViewController.xib; sourceTree = "<group>"; };
 		E872ED1727EC8AD700559A37 /* MyPerson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPerson.swift; sourceTree = "<group>"; };
@@ -82,6 +83,7 @@
 		E89659B727EDD17E00B75309 /* MyDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDetailPresenter.swift; sourceTree = "<group>"; };
 		E89659B927EDD1AB00B75309 /* MyDetailViewInputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDetailViewInputDelegate.swift; sourceTree = "<group>"; };
 		E89659BC27EDD1F200B75309 /* MyDetailViewOutputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDetailViewOutputDelegate.swift; sourceTree = "<group>"; };
+		E89659BE27EDEE0400B75309 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +118,8 @@
 			children = (
 				E83B818627AA7B9D00B492CF /* AppDelegate.swift */,
 				E83B818827AA7B9D00B492CF /* SceneDelegate.swift */,
-				E83B81A627AA880000B492CF /* ModuleBuilder.swift */,
+				E83B81A627AA880000B492CF /* AssemblyModuleBuilder.swift */,
+				E89659BE27EDEE0400B75309 /* Router.swift */,
 				E89659AE27EDD0EF00B75309 /* MySecondModule */,
 				E872ED1B27EC8FCB00559A37 /* SecondModule */,
 				E872ED0E27EC895300559A37 /* MyModule */,
@@ -464,7 +467,7 @@
 				E89659AD27EDBCE600B75309 /* MyUser.swift in Sources */,
 				E872ED2A27EC94E300559A37 /* SecondViewOutputDelegate.swift in Sources */,
 				E83B819D27AA7BFA00B492CF /* MainPresenter.swift in Sources */,
-				E83B81A727AA880000B492CF /* ModuleBuilder.swift in Sources */,
+				E83B81A727AA880000B492CF /* AssemblyModuleBuilder.swift in Sources */,
 				E872ED3127ECB5C500559A37 /* DetailPresenterProtocol.swift in Sources */,
 				E872ED2327EC91BF00559A37 /* SecondPresenter.swift in Sources */,
 				E872ED2027EC90F300559A37 /* Crypto.swift in Sources */,
@@ -476,6 +479,7 @@
 				E89659BA27EDD1AB00B75309 /* MyDetailViewInputDelegate.swift in Sources */,
 				E83B819B27AA7BC600B492CF /* Comment.swift in Sources */,
 				E872ED1827EC8AD700559A37 /* MyPerson.swift in Sources */,
+				E89659BF27EDEE0400B75309 /* Router.swift in Sources */,
 				E89659BD27EDD1F200B75309 /* MyDetailViewOutputDelegate.swift in Sources */,
 				E83B818927AA7B9D00B492CF /* SceneDelegate.swift in Sources */,
 				E89659AB27EDBC5600B75309 /* MyNetworkServiceProtocol.swift in Sources */,
