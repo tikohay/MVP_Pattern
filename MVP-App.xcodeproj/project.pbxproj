@@ -36,7 +36,12 @@
 		E89659A627EDBAE000B75309 /* MySecondViewOutputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89659A527EDBAE000B75309 /* MySecondViewOutputDelegate.swift */; };
 		E89659A827EDBB1A00B75309 /* MySecondPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89659A727EDBB1A00B75309 /* MySecondPresenter.swift */; };
 		E89659AB27EDBC5600B75309 /* MyNetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89659AA27EDBC5600B75309 /* MyNetworkServiceProtocol.swift */; };
-		E89659AD27EDBCE600B75309 /* MyUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89659AC27EDBCE600B75309 /* MyUsers.swift */; };
+		E89659AD27EDBCE600B75309 /* MyUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89659AC27EDBCE600B75309 /* MyUser.swift */; };
+		E89659B527EDD13000B75309 /* MyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89659B327EDD13000B75309 /* MyDetailViewController.swift */; };
+		E89659B627EDD13000B75309 /* MyDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E89659B427EDD13000B75309 /* MyDetailViewController.xib */; };
+		E89659B827EDD17E00B75309 /* MyDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89659B727EDD17E00B75309 /* MyDetailPresenter.swift */; };
+		E89659BA27EDD1AB00B75309 /* MyDetailViewInputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89659B927EDD1AB00B75309 /* MyDetailViewInputDelegate.swift */; };
+		E89659BD27EDD1F200B75309 /* MyDetailViewOutputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E89659BC27EDD1F200B75309 /* MyDetailViewOutputDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,7 +76,12 @@
 		E89659A527EDBAE000B75309 /* MySecondViewOutputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySecondViewOutputDelegate.swift; sourceTree = "<group>"; };
 		E89659A727EDBB1A00B75309 /* MySecondPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySecondPresenter.swift; sourceTree = "<group>"; };
 		E89659AA27EDBC5600B75309 /* MyNetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNetworkServiceProtocol.swift; sourceTree = "<group>"; };
-		E89659AC27EDBCE600B75309 /* MyUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUsers.swift; sourceTree = "<group>"; };
+		E89659AC27EDBCE600B75309 /* MyUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUser.swift; sourceTree = "<group>"; };
+		E89659B327EDD13000B75309 /* MyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDetailViewController.swift; sourceTree = "<group>"; };
+		E89659B427EDD13000B75309 /* MyDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyDetailViewController.xib; sourceTree = "<group>"; };
+		E89659B727EDD17E00B75309 /* MyDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDetailPresenter.swift; sourceTree = "<group>"; };
+		E89659B927EDD1AB00B75309 /* MyDetailViewInputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDetailViewInputDelegate.swift; sourceTree = "<group>"; };
+		E89659BC27EDD1F200B75309 /* MyDetailViewOutputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDetailViewOutputDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +117,7 @@
 				E83B818627AA7B9D00B492CF /* AppDelegate.swift */,
 				E83B818827AA7B9D00B492CF /* SceneDelegate.swift */,
 				E83B81A627AA880000B492CF /* ModuleBuilder.swift */,
-				E896599927EDB82D00B75309 /* MyModuleWithNetwork */,
+				E89659AE27EDD0EF00B75309 /* MySecondModule */,
 				E872ED1B27EC8FCB00559A37 /* SecondModule */,
 				E872ED0E27EC895300559A37 /* MyModule */,
 				E872ED2B27ECAF7D00559A37 /* Main */,
@@ -302,7 +312,7 @@
 		E896599F27EDB9F400B75309 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E89659AC27EDBCE600B75309 /* MyUsers.swift */,
+				E89659AC27EDBCE600B75309 /* MyUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -321,6 +331,51 @@
 				E89659AA27EDBC5600B75309 /* MyNetworkServiceProtocol.swift */,
 			);
 			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		E89659AE27EDD0EF00B75309 /* MySecondModule */ = {
+			isa = PBXGroup;
+			children = (
+				E89659AF27EDD10000B75309 /* MyDetailModule */,
+				E896599927EDB82D00B75309 /* MyModuleWithNetwork */,
+			);
+			path = MySecondModule;
+			sourceTree = "<group>";
+		};
+		E89659AF27EDD10000B75309 /* MyDetailModule */ = {
+			isa = PBXGroup;
+			children = (
+				E89659B227EDD11F00B75309 /* View */,
+				E89659B127EDD11B00B75309 /* Model */,
+				E89659B027EDD11400B75309 /* Presenter */,
+			);
+			path = MyDetailModule;
+			sourceTree = "<group>";
+		};
+		E89659B027EDD11400B75309 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E89659B727EDD17E00B75309 /* MyDetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E89659B127EDD11B00B75309 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E89659B227EDD11F00B75309 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E89659B327EDD13000B75309 /* MyDetailViewController.swift */,
+				E89659B427EDD13000B75309 /* MyDetailViewController.xib */,
+				E89659B927EDD1AB00B75309 /* MyDetailViewInputDelegate.swift */,
+				E89659BC27EDD1F200B75309 /* MyDetailViewOutputDelegate.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,6 +439,7 @@
 				E83B819327AA7B9E00B492CF /* LaunchScreen.storyboard in Resources */,
 				E896599D27EDB87C00B75309 /* MySecondViewController.xib in Resources */,
 				E872ED3827ECB77F00559A37 /* DetailViewController.xib in Resources */,
+				E89659B627EDD13000B75309 /* MyDetailViewController.xib in Resources */,
 				E83B819027AA7B9E00B492CF /* Assets.xcassets in Resources */,
 				E83B818E27AA7B9D00B492CF /* Main.storyboard in Resources */,
 				E83B81A527AA865800B492CF /* MainViewController.xib in Resources */,
@@ -400,11 +456,12 @@
 			files = (
 				E89659A627EDBAE000B75309 /* MySecondViewOutputDelegate.swift in Sources */,
 				E89659A827EDBB1A00B75309 /* MySecondPresenter.swift in Sources */,
+				E89659B827EDD17E00B75309 /* MyDetailPresenter.swift in Sources */,
 				E872ED2627EC91FC00559A37 /* SecondViewController.swift in Sources */,
 				E872ED3727ECB77F00559A37 /* DetailViewController.swift in Sources */,
 				E896599C27EDB87C00B75309 /* MySecondViewController.swift in Sources */,
 				E872ED2827EC924900559A37 /* SecondViewInputDelegate.swift in Sources */,
-				E89659AD27EDBCE600B75309 /* MyUsers.swift in Sources */,
+				E89659AD27EDBCE600B75309 /* MyUser.swift in Sources */,
 				E872ED2A27EC94E300559A37 /* SecondViewOutputDelegate.swift in Sources */,
 				E83B819D27AA7BFA00B492CF /* MainPresenter.swift in Sources */,
 				E83B81A727AA880000B492CF /* ModuleBuilder.swift in Sources */,
@@ -416,11 +473,14 @@
 				E83B818727AA7B9D00B492CF /* AppDelegate.swift in Sources */,
 				E872ED2D27ECAF9100559A37 /* NetworkService.swift in Sources */,
 				E872ED1A27EC8B0200559A37 /* MyPresenter.swift in Sources */,
+				E89659BA27EDD1AB00B75309 /* MyDetailViewInputDelegate.swift in Sources */,
 				E83B819B27AA7BC600B492CF /* Comment.swift in Sources */,
 				E872ED1827EC8AD700559A37 /* MyPerson.swift in Sources */,
+				E89659BD27EDD1F200B75309 /* MyDetailViewOutputDelegate.swift in Sources */,
 				E83B818927AA7B9D00B492CF /* SceneDelegate.swift in Sources */,
 				E89659AB27EDBC5600B75309 /* MyNetworkServiceProtocol.swift in Sources */,
 				E89659A427EDBA7E00B75309 /* MySecondViewInputDelegate.swift in Sources */,
+				E89659B527EDD13000B75309 /* MyDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

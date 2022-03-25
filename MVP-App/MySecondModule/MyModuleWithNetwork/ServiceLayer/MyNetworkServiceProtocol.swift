@@ -8,11 +8,11 @@
 import Foundation
 
 protocol MyNetworkServiceProtocol {
-    func getUsers(completion: @escaping (Result<[MyUsers], Error>) -> Void)
+    func getUsers(completion: @escaping (Result<[MyUser], Error>) -> Void)
 }
 
 class MyNetworkService: MyNetworkServiceProtocol {
-    func getUsers(completion: @escaping (Result<[MyUsers], Error>) -> Void) {
+    func getUsers(completion: @escaping (Result<[MyUser], Error>) -> Void) {
         let stringUrl = "https://jsonplaceholder.typicode.com/users"
         guard let url = URL(string: stringUrl) else { return }
         
@@ -22,7 +22,7 @@ class MyNetworkService: MyNetworkServiceProtocol {
             }
             
             do {
-                let obj = try JSONDecoder().decode([MyUsers].self, from: data!)
+                let obj = try JSONDecoder().decode([MyUser].self, from: data!)
                 completion(.success(obj))
             } catch {
                 completion(.failure(error))

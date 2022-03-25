@@ -8,5 +8,5 @@
 import Foundation
 
 protocol MySecondViewInputDelegate: AnyObject {
-    func showUsers(users: [MyUsers]) 
+    func showUsers(users: [MyUser]) 
 }

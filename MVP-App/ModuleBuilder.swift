@@ -13,6 +13,7 @@ protocol Builder {
     static func createMyModule() -> UIViewController
     static func createDetailModule(comment: Comment?) -> UIViewController
     static func createMySecondModule() -> UIViewController
+    static func createMyDetailModule(user: MyUser) -> UIViewController
 }
 
 class ModuleBuilder: Builder {
@@ -44,6 +45,13 @@ class ModuleBuilder: Builder {
         let view = MySecondViewController()
         let networkService = MyNetworkService()
         let presenter = MySecondPresenter(view: view, networkService: networkService)
+        view.presenter = presenter
+        return view
+    }
+    
+    static func createMyDetailModule(user: MyUser) -> UIViewController {
+        let view = MyDetailViewController()
+        let presenter = MyDetailPresenter(view: view, user: user)
         view.presenter = presenter
         return view
     }

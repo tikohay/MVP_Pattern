@@ -11,7 +11,7 @@ class MySecondViewController: UIViewController {
     
     @IBOutlet weak var myTableView: UITableView!
     
-    private var users: [MyUsers] = []
+    private var users: [MyUser] = []
     
     var presenter: MySecondPresenterProtocol!
 
@@ -35,8 +35,16 @@ extension MySecondViewController: UITableViewDataSource {
     }
 }
 
+extension MySecondViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let user = users[indexPath.row]
+        let vc = ModuleBuilder.createMyDetailModule(user: user)
+        present(vc, animated: true, completion: nil)
+    }
+}
+
 extension MySecondViewController: MySecondViewInputDelegate {
-    func showUsers(users: [MyUsers]) {
+    func showUsers(users: [MyUser]) {
         self.users = users
         self.myTableView.reloadData()
     }
