@@ -27,6 +27,9 @@
 		E872ED2827EC924900559A37 /* SecondViewInputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872ED2727EC924900559A37 /* SecondViewInputDelegate.swift */; };
 		E872ED2A27EC94E300559A37 /* SecondViewOutputDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872ED2927EC94E300559A37 /* SecondViewOutputDelegate.swift */; };
 		E872ED2D27ECAF9100559A37 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872ED2C27ECAF9100559A37 /* NetworkService.swift */; };
+		E872ED3127ECB5C500559A37 /* DetailPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872ED3027ECB5C500559A37 /* DetailPresenterProtocol.swift */; };
+		E872ED3727ECB77F00559A37 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E872ED3527ECB77F00559A37 /* DetailViewController.swift */; };
+		E872ED3827ECB77F00559A37 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E872ED3627ECB77F00559A37 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +55,9 @@
 		E872ED2727EC924900559A37 /* SecondViewInputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewInputDelegate.swift; sourceTree = "<group>"; };
 		E872ED2927EC94E300559A37 /* SecondViewOutputDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewOutputDelegate.swift; sourceTree = "<group>"; };
 		E872ED2C27ECAF9100559A37 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E872ED3027ECB5C500559A37 /* DetailPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterProtocol.swift; sourceTree = "<group>"; };
+		E872ED3527ECB77F00559A37 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		E872ED3627ECB77F00559A37 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				E872ED2E27ECAFAB00559A37 /* ServiceLayer */,
+				E872ED2F27ECB5AE00559A37 /* DetailModule */,
 				E83B81A027AA855300B492CF /* MainModule */,
 			);
 			path = Main;
@@ -219,6 +226,40 @@
 				E872ED2C27ECAF9100559A37 /* NetworkService.swift */,
 			);
 			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		E872ED2F27ECB5AE00559A37 /* DetailModule */ = {
+			isa = PBXGroup;
+			children = (
+				E872ED3427ECB76100559A37 /* View */,
+				E872ED3327ECB75B00559A37 /* Model */,
+				E872ED3227ECB74600559A37 /* Presenter */,
+			);
+			path = DetailModule;
+			sourceTree = "<group>";
+		};
+		E872ED3227ECB74600559A37 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E872ED3027ECB5C500559A37 /* DetailPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E872ED3327ECB75B00559A37 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E872ED3427ECB76100559A37 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E872ED3527ECB77F00559A37 /* DetailViewController.swift */,
+				E872ED3627ECB77F00559A37 /* DetailViewController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E83B819327AA7B9E00B492CF /* LaunchScreen.storyboard in Resources */,
+				E872ED3827ECB77F00559A37 /* DetailViewController.xib in Resources */,
 				E83B819027AA7B9E00B492CF /* Assets.xcassets in Resources */,
 				E83B818E27AA7B9D00B492CF /* Main.storyboard in Resources */,
 				E83B81A527AA865800B492CF /* MainViewController.xib in Resources */,
@@ -295,10 +337,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E872ED2627EC91FC00559A37 /* SecondViewController.swift in Sources */,
+				E872ED3727ECB77F00559A37 /* DetailViewController.swift in Sources */,
 				E872ED2827EC924900559A37 /* SecondViewInputDelegate.swift in Sources */,
 				E872ED2A27EC94E300559A37 /* SecondViewOutputDelegate.swift in Sources */,
 				E83B819D27AA7BFA00B492CF /* MainPresenter.swift in Sources */,
 				E83B81A727AA880000B492CF /* ModuleBuilder.swift in Sources */,
+				E872ED3127ECB5C500559A37 /* DetailPresenterProtocol.swift in Sources */,
 				E872ED2327EC91BF00559A37 /* SecondPresenter.swift in Sources */,
 				E872ED2027EC90F300559A37 /* Crypto.swift in Sources */,
 				E83B818B27AA7B9D00B492CF /* MainViewController.swift in Sources */,
